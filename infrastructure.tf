@@ -11,3 +11,11 @@ module "database" {
 
   tags = var.tags
 }
+
+module "application" {
+  source = "./modules/application"
+
+  kinesis_pipeline = "${var.namespace}-${var.kinesis_pipeline}"
+
+  tags = var.tags
+}
