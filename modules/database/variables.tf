@@ -20,10 +20,3 @@ variable "timestream_retention_properties" {
     memory_store_retention_period_in_hours  = 6
   }
 }
-
-
-variable "tags" {
-  description = "Global resources tags"
-  type        = map(string)
-  default     = {}
-}

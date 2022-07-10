@@ -20,8 +20,3 @@ variable "retention_properties" {
     memory_store_retention_period_in_hours  = 6
   }
 }
-
-variable "tags" {
-  description = "Tags to apply to the timestream database"
-  type        = map(string)
-}

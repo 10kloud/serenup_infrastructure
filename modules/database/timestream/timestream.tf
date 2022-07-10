@@ -1,6 +1,5 @@
 resource "aws_timestreamwrite_database" "timestream_db" {
   database_name = var.database_name
-  tags          = var.tags
 }
 
 resource "aws_timestreamwrite_table" "timestream_table" {
@@ -13,6 +12,4 @@ resource "aws_timestreamwrite_table" "timestream_table" {
     magnetic_store_retention_period_in_days = var.retention_properties.magnetic_store_retention_period_in_days
     memory_store_retention_period_in_hours  = var.retention_properties.memory_store_retention_period_in_hours
   }
-
-  tags = var.tags
 }

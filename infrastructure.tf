@@ -8,14 +8,10 @@ module "database" {
     magnetic_store_retention_period_in_days = 6
     memory_store_retention_period_in_hours  = 6
   }
-
-  tags = var.tags
 }
 
 module "application" {
   source = "./modules/application"
 
   kinesis_pipeline = "${var.namespace}-${var.kinesis_pipeline}"
-
-  tags = var.tags
 }
