@@ -14,4 +14,6 @@ module "application" {
   source = "./modules/application"
 
   kinesis_pipeline = "${var.namespace}-${var.kinesis_pipeline}"
+
+  identity_pool_name = "${var.namespace}-id"
 }
