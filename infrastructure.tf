@@ -15,5 +15,7 @@ module "application" {
 
   kinesis_pipeline = "${var.namespace}-${var.kinesis_pipeline}"
 
+  website_bucket_name = "${var.namespace}-frontend"
+
   identity_pool_name = "${var.namespace}-id"
 }
